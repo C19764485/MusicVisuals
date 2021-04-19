@@ -1,5 +1,6 @@
 package example;
 
+import MyVisual;
 import processing.core.*;
 
 // This is an example of a visual that renders the waveform

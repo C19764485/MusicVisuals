@@ -1,16 +1,21 @@
+  
 package example;
 
+import example.AudioBandsVisual;
+import example.WaveForm;
 import ie.tudublin.*;
+import processing.core.PApplet;
+import example.Flag;
 
-public class MyVisual extends Visual
+public class MyVisual extends Flag 
 {    
     WaveForm wf;
     AudioBandsVisual abv;
 
     public void settings()
     {
-        size(1024, 500);
-        
+        size(1024, 900);
+       
         // Use this to make fullscreen
         //fullScreen();
 
@@ -20,12 +25,14 @@ public class MyVisual extends Visual
 
     public void setup()
     {
+        frameRate(75);
         startMinim();
-                
+        
         // Call loadAudio to load an audio file to process 
-        //loadAudio("heroplanet.mp3");   
+        loadAudio("greek2.mp3");   
 
         
+
         // Call this instead to read audio from the microphone
         startListening(); 
         
@@ -37,8 +44,18 @@ public class MyVisual extends Visual
     {
         if (key == ' ')
         {
-            getAudioPlayer().cue(0);
-            getAudioPlayer().play();
+            if (getAudioPlayer().isPlaying() == true)
+            {
+                getAudioPlayer().pause();
+            }
+            else
+            {
+                getAudioPlayer().play();
+            }
+        }
+        if (key == 'r')
+        {
+            getAudioPlayer().rewind();
         }
     }
 
@@ -49,6 +66,12 @@ public class MyVisual extends Visual
         {
             // Call this if you want to use FFT data
             calculateFFT(); 
+            flag();
+            
+            fill(255);
+		    text("FPS: " + (int) frameRate, 10, 10);
+
+            
         }
         catch(VisualException e)
         {

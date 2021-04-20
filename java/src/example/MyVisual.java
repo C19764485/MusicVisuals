@@ -1,29 +1,30 @@
   
 package example;
 
-import example.AudioBandsVisual;
-import example.WaveForm;
+import example.*;
 import ie.tudublin.*;
 import processing.core.PApplet;
-import example.Flag;
 
-public class MyVisual extends Flag 
+public class MyVisual extends Visual
 {    
     WaveForm wf;
     AudioBandsVisual abv;
+    Turbine trb;
+    GreekFlagMove grkflgmv;
+    IrishFlagMove irsflgmv;
+    Flags flgz;
     int value = 0;
-    float time;
-    String filename = "heroplanet.mp3";
-
+    String filename;
+    
     public void settings()
     {
-        size(1024, 900);
+        size(1024, 900, P3D);
 
         // Use this to make fullscreen
         //fullScreen();
 
         // Use this to make fullscreen and use P3D for 3D graphics
-        //fullScreen(P3D, SPAN); 
+        // fullScreen(P3D, SPAN); 
     }
 
     public void setup()
@@ -32,11 +33,15 @@ public class MyVisual extends Flag
         startMinim();
         
         // Call loadAudio to load an audio file to process 
-        loadAudio("greek2.mp3");
+        loadAudio("greek.mp3");
 
         // Call this instead to read audio from the microphone
         // startListening(); 
-        
+
+        grkflgmv = new GreekFlagMove(this);
+        irsflgmv = new IrishFlagMove(this);
+        flgz = new Flags(this);
+        trb = new Turbine(this);
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
     }
@@ -61,14 +66,7 @@ public class MyVisual extends Flag
             }
             else
             {
-                if (value != 0)
-                {
-                    getAudioPlayer().play();
-                }
-                else
-                {
-                    text("You must choose between 1 or 2.\n", width / 5, height / 3);
-                }
+                getAudioPlayer().play();
             }
         }
         if (key == 'r')
@@ -86,10 +84,10 @@ public class MyVisual extends Flag
             calculateFFT(); 
             
             fill(255);
-		    text("FPS: " + (int) frameRate, width + 30, height + 30);
+		    text("FPS: " + (int) frameRate, 30, 10);
 
             textAlign(CENTER, CENTER);
-            text("Please press '1' for greek or '2' for irish.\n\n Press 'Space' to play and pause music.\n\n Press 'r' to rewind.", width / 2, height / 2);
+            text("Please press '1' for Greek or '2' for Irish flag.\n\n Press 'Space' to play and pause music.\n\n Press 'r' to rewind.", 150, height - 50);
             
         }
         catch(VisualException e)
@@ -97,35 +95,36 @@ public class MyVisual extends Flag
             e.printStackTrace();
         }
         // Call this is you want to use frequency bands
-        calculateFrequencyBands(); 
+        // calculateFrequencyBands(); 
 
         // Call this is you want to get the average amplitude
-        calculateAverageAmplitude();
+        // calculateAverageAmplitude();
        
+
         if (getAudioPlayer().isPlaying() == false)
         {
-            flagStatic();
+            flgz.render();
         }
 
         switch(value) {
             case 0:
             {
-                flagStatic(); 
                 break;
             }
             case 1:
             {
-                flagMovingGreek();
+                grkflgmv.render();
                 break;
             }
             case 2:
             {
-                flagMovingIrish();
+                irsflgmv.render();
                 break;
             }
         } 
         
         // wf.render();
         // abv.render();
+        trb.render();
     }
 }

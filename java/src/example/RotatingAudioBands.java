@@ -5,7 +5,6 @@ import ie.tudublin.VisualException;
 
 public class RotatingAudioBands extends Visual {
 
-
     public void settings()
     {
         size(800, 800, P3D);

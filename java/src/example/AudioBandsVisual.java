@@ -15,6 +15,7 @@ public class AudioBandsVisual
 
     public void render()
     {
+        mv.colorMode(PApplet.HSB);
         float gap = mv.width / (float) mv.getBands().length;
         mv.noStroke();
         for(int i = 0 ; i < mv.getBands().length ; i ++)

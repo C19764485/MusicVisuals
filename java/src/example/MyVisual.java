@@ -14,12 +14,14 @@ public class MyVisual extends Visual
     GreekFlagMove grkflgmv;
     IrishFlagMove irsflgmv;
     Flags flgz;
+    Shapes shp;
     int value = 0;
     String filename;
-    
+    // Shapes[] shp = new Shapes[100];
+
     public void settings()
     {
-        size(1024, 950, P3D);
+        size(1024, 800, P3D);
 
         // Use this to make fullscreen
         //fullScreen();
@@ -34,7 +36,7 @@ public class MyVisual extends Visual
         startMinim();
         
         // Call loadAudio to load an audio file to process 
-        loadAudio("greek2.mp3");
+        loadAudio("greek.mp3");
 
         // Call this instead to read audio from the microphone
         // startListening(); 
@@ -46,6 +48,7 @@ public class MyVisual extends Visual
         wf = new WaveForm(this);
         abv = new AudioBandsVisual(this);
         sht = new Sheet(this);
+        shp = new Shapes(this);
     }
 
     public void keyPressed()
@@ -82,6 +85,11 @@ public class MyVisual extends Visual
                 value = 6;
                 break;
             }
+            case '7':
+            {
+                value = 7;
+                break;
+            }
         } 
         if (key == ' ')
         {
@@ -113,7 +121,7 @@ public class MyVisual extends Visual
 		    text("FPS: " + (int) frameRate, 30, 10);
 
             textAlign(CENTER, CENTER);
-            text("Press '1': Greek flag.\nPress '2': Irish flag.\nPress '3': 'Turbine'\nPress '4': 'Moving Sheet'.\n\nPress 'Space' to play/pause music.\nPress 'r' to rewind.", 150, height - 50);
+            text("Press '1': Greek flag.\nPress '2': Irish flag.\nPress '3': 'Turbine'\nPress '4': 'Moving Sheet'.\nPress '5': 'Shapes'.\n\nPress 'Space' to play/pause music.\nPress 'r' to rewind.", 120, height - 60);
 
             if (getAudioPlayer().isPlaying() == false)
             {
@@ -148,12 +156,17 @@ public class MyVisual extends Visual
                 }
                 case 5:
                 {
-                    wf.render();
+                    shp.render();
                     break;
                 }
                 case 6:
                 {
                     abv.render();
+                    break;
+                }
+                case 7:
+                {
+                    wf.render();
                     break;
                 }
             }  

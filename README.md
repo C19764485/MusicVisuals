@@ -70,7 +70,7 @@ if (getAudioPlayer().isPlaying() == false)
 }
 ```
 # What I am most proud of in the assignment
-I am proud of creating an immitation of marine turbine, which reminds me the knowledge I gained from Marine Engineering. I managed to make it rotate in two different axis (X, Y), while gives the illusion of a real exhaust gas turbine from a motor vessel.
+I am proud of creating a colorful immitation of marine turbine, which reminds me the knowledge I gained from Marine Engineering. I managed to make it rotate in two different axis (X, Y), while gives the illusion of a real exhaust gas turbine from a motor vessel.
 
 - code for turbine:
 ```Java

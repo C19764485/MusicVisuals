@@ -104,10 +104,12 @@ The visuals are seperated below:
 
 1. Greek Flag: A greek flag that bounces up and down on music's amplitude.
 1. Irish Flag: A irish flag that bounces up and down on music's amplitude.
-1. Turbine:    A colorful immitation of a real marine exhaust gas turbine.
-1. Sheet:      A light blue moving sheet that bounces on music's amplitude.
-1. Shapes:     A Colorful spirals generally rotating clockwise forming various shapes.
-1. Moving Objects: Colorful Ellipses forming a circle and vibrating to music's response.
+1. Turbine: A colorful immitation of a real marine exhaust gas turbine.
+1. Sheet: A light blue moving sheet that bounces on music's amplitude.
+1. Shapes: A Colorful spirals generally rotating clockwise forming various shapes.
+1. Moving Objects: Colorful Ellipses forming a circle and tringles in the middle all together vibrating to music's response.
+
+
 
 This is a [hyperlink](http://bryanduggan.org)
 

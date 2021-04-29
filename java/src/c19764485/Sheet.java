@@ -1,10 +1,7 @@
 package c19764485;
 
-import ddf.minim.AudioBuffer;
 import ie.tudublin.Visual;
 import processing.core.PApplet;
-import processing.core.*;
-import c19764485.MyVisual;
 
 public class Sheet extends Visual
 {

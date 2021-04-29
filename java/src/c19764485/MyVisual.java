@@ -2,23 +2,23 @@ package c19764485;
 
 import example.*;
 import ie.tudublin.*;
-import c19764485.*;
-import processing.core.PApplet;
 
 public class MyVisual extends Visual
 {    
-    WaveForm wf;
-    AudioBandsVisual abv;
-    Turbine trb;
-    Sheet sht;
+    Flags flgz;
     GreekFlagMove grkflgmv;
     IrishFlagMove irsflgmv;
-    Flags flgz;
+    Turbine trb;
+    Sheet sht;
     Shapes shp;
-    int value = 0;
-    String filename;
     MovingObjects mvobjs;
 
+    //Default classes
+    WaveForm wf;
+    AudioBandsVisual abv;
+
+    //Global variables
+    int value = 0;
     // Shapes[] shp = new Shapes[100];
 
     public void settings()
@@ -34,7 +34,9 @@ public class MyVisual extends Visual
 
     public void setup()
     {
-        frameRate(75);
+        // Framerate set up to 75
+        // frameRate(75);
+
         startMinim();
         
         // Call loadAudio to load an audio file to process 
@@ -43,17 +45,17 @@ public class MyVisual extends Visual
         // Call this instead to read audio from the microphone
         // startListening(); 
 
+        // All inctances from all created classes
+        flgz = new Flags(this);
         grkflgmv = new GreekFlagMove(this);
         irsflgmv = new IrishFlagMove(this);
-        flgz = new Flags(this);
         trb = new Turbine(this);
-        // wf = new WaveForm(this);
-        // abv = new AudioBandsVisual(this);
         sht = new Sheet(this);
         shp = new Shapes(this);
         mvobjs = new MovingObjects(this);
     }
 
+    // Function for pressed keys assigns 'value' variable to each numbered visual
     public void keyPressed()
     {
         switch(key)
@@ -99,6 +101,11 @@ public class MyVisual extends Visual
                 break;
             }
         } 
+
+        /* 
+            If statement that allows to pause the music by pressing 'Space' key
+            in case music is playing.
+        */
         if (key == ' ')
         {
             if (getAudioPlayer().isPlaying() == true)
@@ -110,12 +117,15 @@ public class MyVisual extends Visual
                 getAudioPlayer().play();
             }
         }
+
+        // If statement that rewinds the song back to the beginning.
         if (key == 'r')
         {
             getAudioPlayer().rewind();
         }
     }
 
+    // Draw method that all visuals are called onto.
     public void draw()
     {
         background(0);
@@ -136,6 +146,7 @@ public class MyVisual extends Visual
                 flgz.render();
             }
 
+            // Switch statement that cooperated with keypressed() function with the 'value' variable.
             switch(value)
             {
                 case 0:

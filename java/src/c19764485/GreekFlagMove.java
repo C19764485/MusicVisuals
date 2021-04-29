@@ -1,8 +1,6 @@
 package c19764485;
 
 import ie.tudublin.Visual;
-import processing.core.*;
-import c19764485.MyVisual;
 
 public class GreekFlagMove extends Visual
 {
@@ -17,7 +15,7 @@ public class GreekFlagMove extends Visual
     public void render() {
         grflgmv.colorMode(RGB);
         lerpedBuffer = new float[width];
-        float halfHeight = height / 2;
+        // float halfHeight = height / 2;
         float average = 0;
         float sum = 0;
 

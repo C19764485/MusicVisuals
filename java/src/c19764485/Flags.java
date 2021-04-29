@@ -1,8 +1,8 @@
-package example;
+package c19764485;
 
 import ie.tudublin.Visual;
 import processing.core.*;
-import example.MyVisual;
+import c19764485.MyVisual;
 
 public class Flags extends Visual
 {

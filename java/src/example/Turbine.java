@@ -24,13 +24,13 @@ public class Turbine extends Visual
         trb.translate(width * 5, height * (float) 4.5);
         trb.colorMode(PApplet.HSB);
         trb.lights();
-        trb.rotateX(angle);
-        trb.rotateY(angle);
+        trb.rotate(angle);
 
         for(int i = 0; i < ab.size(); i++)
         {
             trb.rotateX(50 + ab.get(i) / 100);
-            trb.rotateY(50 + ab.get(i) / 100);
+            trb.rotateY(50 + ab.get(i) / 50);
+            // trb.noStroke();
             trb.fill(PApplet.map(ab.get(i), 0, 100, 0, 0), 100, 0);
             trb.strokeWeight(1 + ab.get(i));
             trb.stroke(PApplet.map(i, 0, ab.size(), 255, 0), 255, 255);

@@ -17,11 +17,13 @@ public class MyVisual extends Visual
     Shapes shp;
     int value = 0;
     String filename;
+    MovingObjects mvobjs;
+
     // Shapes[] shp = new Shapes[100];
 
     public void settings()
     {
-        size(1024, 800, P3D);
+        size(1024, 950, P3D);
 
         // Use this to make fullscreen
         //fullScreen();
@@ -49,6 +51,7 @@ public class MyVisual extends Visual
         abv = new AudioBandsVisual(this);
         sht = new Sheet(this);
         shp = new Shapes(this);
+        mvobjs = new MovingObjects(this);
     }
 
     public void keyPressed()
@@ -87,7 +90,12 @@ public class MyVisual extends Visual
             }
             case '7':
             {
-                value = 7;
+                // value = 7;
+                break;
+            }
+            case '8':
+            {
+                // value = 8;
                 break;
             }
         } 
@@ -121,7 +129,7 @@ public class MyVisual extends Visual
 		    text("FPS: " + (int) frameRate, 30, 10);
 
             textAlign(CENTER, CENTER);
-            text("Press '1': Greek flag.\nPress '2': Irish flag.\nPress '3': 'Turbine'\nPress '4': 'Moving Sheet'.\nPress '5': 'Shapes'.\n\nPress 'Space' to play/pause music.\nPress 'r' to rewind.", 120, height - 60);
+            text("Press '1': Greek flag.\nPress '2': Irish flag.\nPress '3': 'Turbine'\nPress '4': 'Moving Sheet'.\nPress '5': 'Shapes'.\nPress '6': 'Moving Objects'.\n\nPress 'Space' to play/pause music.\nPress 'r' to rewind.", 120, height - 70);
 
             if (getAudioPlayer().isPlaying() == false)
             {
@@ -161,12 +169,17 @@ public class MyVisual extends Visual
                 }
                 case 6:
                 {
-                    abv.render();
+                    mvobjs.render();
                     break;
                 }
                 case 7:
                 {
-                    wf.render();
+                
+                    break;
+                }
+                case 8:
+                {
+                    
                     break;
                 }
             }  

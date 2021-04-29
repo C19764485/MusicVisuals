@@ -26,15 +26,15 @@ public class Sheet extends Visual
         int rows = h / scl;
 
         sht.noFill();
-        sht.translate(width * (float) 2.3, height * 3);
+        // sht.translate(width * (float) 2.3, height * 3);
         sht.rotateX(angle);
         sht.rotateY(angle);
         
-
-        for (int i = 0; i < ab.size(); i++) 
+        for(int i = 0; i < 255; i++)
         {
-            float c = map(i, 0, ab.size(), 0, 255); //This doesn't work for some reason
-            sht.stroke(0, 134, 255);
+            float c = map(i, 0, ab.size(), 0, 255); //This doesn't seem to work correctly
+            // sht.stroke(0, 134, 255);
+            sht.stroke(c, 255, 255);
         }
 
         for(int x = 0; x < cols; x++)

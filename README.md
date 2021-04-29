@@ -5,7 +5,7 @@ Name: Panagiotis Bampilis
 Student Number: C19764485
 
 # Description of the assignment
-"Music Visuals" is the title of the assignment. The main idea was to bring close two countries: Ireland and Greece with the warmth of a greek old traditional song. This project was created with 6 different visuals, letting the user to enjoy enhanced visuals and mentaly travel through those while listening to greek traditional music.
+"Music Visuals" is the title of the assignment. The main idea was to bring close two countries: Ireland and Greece with the warmth of an old greek traditional song. This project was created with 6 different visuals, letting the user to enjoy enhanced visuals and mentaly travel through those while listening to greek traditional music.
 
 # Instructions
 - By pressing the 'Space' key, the music starts playing.
@@ -70,20 +70,44 @@ if (getAudioPlayer().isPlaying() == false)
 }
 ```
 # What I am most proud of in the assignment
+I am proud of creating an immitation of marine turbine, which reminds me the knowledge I gained from Marine Engineering. I managed to make it rotate in two different axis (X, Y), while gives the illusion of a real exhaust gas turbine from a motor vessel.
 
-# Markdown Tutorial
+- code for turbine:
+```Java
+public void render()
+{
+	trb.translate(width * 5, height * (float) 4.5);
+	trb.colorMode(PApplet.HSB);
+	trb.lights();
+	trb.rotate(angle);
 
-This is *emphasis*
+	for(int i = 0; i < ab.size(); i++)
+	{
+		trb.rotateX(50 + ab.get(i) / 100);
+		trb.rotateY(50 + ab.get(i) / 50);
+		// trb.noStroke();
+		trb.fill(PApplet.map(ab.get(i), 0, 100, 0, 0), 100, 0);
+		trb.strokeWeight(1 + ab.get(i));
+		trb.stroke(PApplet.map(i, 0, ab.size(), 255, 0), 255, 255);
+		trb.ellipse(200, 30, 10 + ab.get(i) * 100, 20);
+		trb.ellipse(100, 10, 10, 55 + ab.get(i) * 200);
+		trb.box(100 + ab.get(i) * 50, 50, 20);
+		trb.box(100, 55 + ab.get(i) * 50, 10);
+	}
+	angle += 0.01f;
+}
+```
 
-This is a bulleted list
+# Visual Description
 
-- Item
-- Item
+The visuals are seperated below:
 
-This is a numbered list
-
-1. Item
-1. Item
+1. Greek Flag: A greek flag that bounces up and down on music's amplitude.
+1. Irish Flag: A irish flag that bounces up and down on music's amplitude.
+1. Turbine:    A colorful immitation of a real marine exhaust gas turbine.
+1. Sheet:      A light blue moving sheet that bounces on music's amplitude.
+1. Shapes:     A Colorful spirals generally rotating clockwise forming various shapes.
+1. Moving Objects: Colorful Ellipses forming a circle and vibrating to music's response.
 
 This is a [hyperlink](http://bryanduggan.org)
 

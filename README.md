@@ -13,7 +13,7 @@ Student Number: C19764485
 - The user has the option of 6 different visuals by pressing from '1' to '6'.
 
 # How it works
-This project uses PApplet from processing.core asset, it is written based on inheritance, encapsulation, constructors, getters and setters. Audio buffer, lerpedAverage and map() function were used for this project as well. Vertices were used to create a shape of a moving sheet (Visual number 4, Credits to 
+This project uses PApplet from processing.core asset, it is written based on inheritance, encapsulation, constructors, getters and setters. Audio buffer, lerpedAverage and map() function were used for this project as well. Vertices were used to create a shape of a moving sheet (Visual number 4, Credits to The [Coding Train](https://www.youtube.com/user/shiffman) turotials for helping to understand how the moving sheet works) and then implemented into a visual responding to audio buffer.
 
 ## All Visuals
 - This part of code below includes all seperate visual classes:

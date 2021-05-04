@@ -35,7 +35,7 @@ public class MyVisual extends Visual
     public void setup()
     {
         // Framerate set up to 75
-        // frameRate(75);
+        frameRate(75);
 
         startMinim();
         

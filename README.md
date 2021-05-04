@@ -36,7 +36,7 @@ public Flags (MyVisual flgz)
 	this.flgz = flgz;
 }
 ```
-- Setup method that includes all instances of the class, the loadAudio() function that loads the greek song and an optional frameRate setup for higher frequency monitors:
+- Setup method that includes all instances of the class, the loadAudio() function that loads the greek song (song can be changed to "greek1.mp3" or "greek2.mp3" in the code) and an optional frameRate setup for higher frequency monitors:
 ```Java
 public void setup()
 {
@@ -108,4 +108,14 @@ The visuals are seperated below:
 1. Sheet: A light blue moving sheet that bounces on music's amplitude.
 1. Shapes: A Colorful spirals generally rotating clockwise forming various shapes.
 1. Moving Objects: Colorful Ellipses forming a circle and tringles in the middle all together vibrating to music's response.
+
+# Screenshots of each Visual
+## Respectively
+![An image](data/flagz.jpg)
+![An image](data/greek.jpg)
+![An image](data/irish.jpg)
+![An image](data/turbine.jpg)
+![An image](data/movingSheet.jpg)
+![An image](data/spirals.jpg)
+![An image](data/movingObjects.jpg)
 

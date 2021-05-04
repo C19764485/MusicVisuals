@@ -111,11 +111,26 @@ The visuals are seperated below:
 
 # Screenshots of each Visual
 ## Respectively
+1. Visuals while music is not playing
 ![An image](images/flagz.jpg)
+
+1. Visual for Greek bouncing flag.
 ![An image](images/greek.jpg)
+
+1. Visual for Irish bouncing flag.
 ![An image](images/irish.jpg)
+
+1. Visual for Turbine.
 ![An image](images/turbine.jpg)
+
+1. Visual for moving sheet.
 ![An image](images/movingSheet.jpg)
+
+1. Visual for colorful spirals.
 ![An image](images/spirals.jpg)
+
+1. Visual for colorful moving objects.
 ![An image](images/movingObjects.jpg)
 
+# Video link for visual project
+## Youtube thumbnail link below

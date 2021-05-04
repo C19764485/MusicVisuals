@@ -111,11 +111,11 @@ The visuals are seperated below:
 
 # Screenshots of each Visual
 ## Respectively
-![An image](data/flagz.jpg)
-![An image](data/greek.jpg)
-![An image](data/irish.jpg)
-![An image](data/turbine.jpg)
-![An image](data/movingSheet.jpg)
-![An image](data/spirals.jpg)
-![An image](data/movingObjects.jpg)
+![An image](images/flagz.jpg)
+![An image](images/greek.jpg)
+![An image](images/irish.jpg)
+![An image](images/turbine.jpg)
+![An image](images/movingSheet.jpg)
+![An image](images/spirals.jpg)
+![An image](images/movingObjects.jpg)
 

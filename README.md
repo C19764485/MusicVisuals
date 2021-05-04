@@ -134,4 +134,4 @@ The visuals are seperated below:
 
 # Video link for visual project
 ## Youtube thumbnail link below
-[[!YouTube](http://img.youtube.com/vi/TInT4-GmV1c/0.jpg)](https://www.youtube.com/watch?v=TInT4-GmV1c)
+[![YouTube](http://img.youtube.com/vi/TInT4-GmV1c/0.jpg)](https://www.youtube.com/watch?v=TInT4-GmV1c)

@@ -13,7 +13,7 @@ Student Number: C19764485
 - The user has the option of 6 different visuals by pressing from '1' to '6'.
 
 # How it works
-This project uses PApplet from processing.core asset, it is written based on inheritance, encapsulation, constructors, getters and setters.
+This project uses PApplet from processing.core asset, it is written based on inheritance, encapsulation, constructors, getters and setters. Audio buffer, lerpedAverage and map() function were used for this project as well. Vertices were used to create a shape of a moving sheet (Visual number 4, Credits to 
 
 ## All Visuals
 - This part of code below includes all seperate visual classes:
@@ -126,7 +126,7 @@ The visuals are seperated below:
 1. Visual for moving sheet.
 ![An image](images/movingSheet.jpg)
 
-1. Visual for colorful spirals.
+1. Visual for colorful rotating spirals.
 ![An image](images/spirals.jpg)
 
 1. Visual for colorful moving objects.
@@ -134,3 +134,4 @@ The visuals are seperated below:
 
 # Video link for visual project
 ## Youtube thumbnail link below
+[[!YouTube](http://img.youtube.com/vi/TInT4-GmV1c/0.jpg)](https://www.youtube.com/watch?v=TInT4-GmV1c)
